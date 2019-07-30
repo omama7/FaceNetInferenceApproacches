@@ -1,3 +1,13 @@
+# Inference Comparison 
+> A repository with official FaceNet implementation and helper scripts to test KNN, SVM, Averaging approaches 
+
+Note: Make sure that before running this script, the weight files should be present in `data/20180402-114759`. The links to download them are in this Readme. 
+
+## Inference Comparison Scripts
+- `src/create_comparison_dataset.py`: This scripts uses the images stored in `data/images/train/`. Make sure that you create this folder. Inside this folder there will be sub-folders with person names. Each sub-folder will have 10 images of that person. These folder should be ready before running the script. This script will extract the feature vectors of these images and store them in `data/train.json`. A `data/label.json` file will also be create that will map person name with his respective class.
+- `src/train_svm.py`: It trains an SVM on the dataset created from `create_comparison_dataset.py`
+- `src/inference_comparison.py`: Compares the three approaches (SVM, KNN, Averaging) using the data in `data/images/inference`. Make sure that this folder is created before running this script. Also, this folder should contain sub-folders with person name. Each can have any number of images of that person.  
+
 # Face Recognition using Tensorflow [![Build Status][travis-image]][travis]
 
 [travis-image]: http://travis-ci.org/davidsandberg/facenet.svg?branch=master
