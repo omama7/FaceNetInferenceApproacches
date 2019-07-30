@@ -96,3 +96,5 @@ ENV/
 *.pkl
 *.jpg
 *.jpeg
+*.pb
+data/20180402-114759/*
