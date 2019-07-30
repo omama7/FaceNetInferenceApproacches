@@ -92,3 +92,7 @@ ENV/
 
 # PyCharm project setting
 .idea
+
+*.pkl
+*.jpg
+*.jpeg
